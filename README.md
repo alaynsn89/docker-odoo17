@@ -3,7 +3,7 @@
 - Docker y Docker Compose
 Instala [docker](https://docs.docker.com/get-docker/) y [docker-compose](https://docs.docker.com/compose/install/) para tu sistema operativo
 
-# Clona este repositorio:
+Clona este repositorio:
 
 ``` sh
 git clone https://github.com/alaynsn89/docker-odoo17.git
