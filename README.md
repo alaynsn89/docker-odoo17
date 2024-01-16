@@ -1,7 +1,7 @@
 # Instalando Odoo v17
 
-- Docker y Docker Compose
-Instala [docker](https://docs.docker.com/get-docker/) y [docker-compose](https://docs.docker.com/compose/install/) para tu sistema operativo
+Instala docker y docker compose
+Des de las fuentes [docker](https://docs.docker.com/get-docker/) y [docker-compose](https://docs.docker.com/compose/install/) para tu sistema operativo
 
 Clona este repositorio:
 

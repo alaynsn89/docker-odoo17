@@ -254,3 +254,52 @@
 2024-01-16 23:16:05,929 1 INFO odoo17 werkzeug: 192.168.65.1 - - [16/Jan/2024 23:16:05] "GET /web/binary/company_logo HTTP/1.1" 304 - 5 0.003 0.005
 2024-01-16 23:16:05,977 1 INFO odoo17 werkzeug: 192.168.65.1 - - [16/Jan/2024 23:16:05] "GET /web/webclient/translations/1705446965959 HTTP/1.1" 200 - 6 0.001 0.014
 2024-01-16 23:16:07,499 1 INFO odoo17 werkzeug: 192.168.65.1 - - [16/Jan/2024 23:16:07] "GET /web/service-worker.js HTTP/1.1" 200 - 5 0.004 0.013
+2024-01-16 23:27:09,090 1 ERROR ? odoo.addons.bus.models.bus: Bus.loop error, sleep and retry 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/bus/models/bus.py", line 183, in run
+    self.loop()
+  File "/usr/lib/python3/dist-packages/odoo/addons/bus/models/bus.py", line 168, in loop
+    conn.poll()
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2024-01-16 23:27:09,122 1 INFO odoo17 odoo.sql_db: Connection to the database failed 
+2024-01-16 23:27:09,122 1 WARNING odoo17 odoo.addons.base.models.ir_cron: Exception in cron: 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_cron.py", line 105, in _process_jobs
+    with db.cursor() as cron_cr:
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 752, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "<decorator-gen-13>", line 2, in borrow
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 681, in borrow
+    result = psycopg2.connect(
+  File "/usr/lib/python3/dist-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "db" (172.25.0.2), port 5432 failed: FATAL:  the database system is shutting down
+
+2024-01-16 23:27:09,136 1 INFO odoo17 odoo.sql_db: Connection to the database failed 
+2024-01-16 23:27:09,136 1 WARNING odoo17 odoo.addons.base.models.ir_cron: Exception in cron: 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_cron.py", line 105, in _process_jobs
+    with db.cursor() as cron_cr:
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 752, in cursor
+    return Cursor(self.__pool, self.__dbname, self.__dsn)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 267, in __init__
+    self._cnx = pool.borrow(dsn)
+  File "<decorator-gen-13>", line 2, in borrow
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/sql_db.py", line 681, in borrow
+    result = psycopg2.connect(
+  File "/usr/lib/python3/dist-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "db" (172.25.0.2), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2024-01-16 23:27:59,143 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
