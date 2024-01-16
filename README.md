@@ -1,9 +1,9 @@
 # Instalando Odoo v17
 
-# Docker y Docker Compose
+- Docker y Docker Compose
 Instala [docker](https://docs.docker.com/get-docker/) y [docker-compose](https://docs.docker.com/compose/install/) para tu sistema operativo
 
-## Descargue e inicie los contenedores
+# Descargue e inicie los contenedores
 
 Escriba el comando:
 ``` sh
@@ -11,7 +11,8 @@ docker-compose up -d
 ```
 Abre en el navegador `localhost:8069` y tendrá acceso a Odoo 17. (Master password por defecto: `master`)
 
-- **Permisos**, dependiendo de su sistema operativo puede ser que necesite permisos en los siguientes directoios de este repositorio:
+# Permisos
+Dependiendo de su sistema operativo puede ser que necesite permisos en los siguientes directoios de este repositorio:
 
 ``` sh
 $ sudo chmod -R 777 addons
@@ -20,7 +21,7 @@ $ sudo chmod -R 777 postgresql
 ```
 
 # Puertos 
-- Si necesita un puerto diferente para su isntancia, cambie **8069** por otro valor en el fichero **docker-compose.yml** ejemplo de la sigueinte manera:
+- Si necesita un puerto diferente para su instancia, cambie **8069** por otro valor en el fichero **docker-compose.yml** ejemplo de la sigueinte manera:
 
 ```
 ports:
