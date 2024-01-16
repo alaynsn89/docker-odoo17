@@ -68,7 +68,7 @@ docker-compose restart
 **Parar Odoo**:
 
 ``` bash
-docker-compose down
+docker-compose stop
 ```
 
 ## docker-compose.yml

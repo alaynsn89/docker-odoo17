@@ -303,3 +303,6 @@ psycopg2.OperationalError: connection to server at "db" (172.25.0.2), port 5432 
 	before or while processing the request.
 
 2024-01-16 23:27:59,143 1 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2024-01-16 23:31:01,409 1 INFO ? odoo.service.server: Initiating shutdown 
+2024-01-16 23:31:01,411 1 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2024-01-16 23:31:01,514 1 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  
